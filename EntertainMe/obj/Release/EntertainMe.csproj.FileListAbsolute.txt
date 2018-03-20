@@ -1,0 +1,15 @@
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Release\EntertainMe.exe.config
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Release\EntertainMe.exe
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Release\EntertainMe.pdb
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Release\MediaToolkit.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Release\Interop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Release\AxInterop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\Interop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\AxInterop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.csproj.ResolveComReference.cache
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.Form1.resources
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.Properties.Resources.resources
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.csproj.GenerateResource.Cache
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.exe
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.pdb
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Release\EntertainMe.csprojResolveAssemblyReference.cache

@@ -1,0 +1,21 @@
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Interop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\Interop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\EntertainMe.csproj.ResolveComReference.cache
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\EntertainMe.Form1.resources
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\EntertainMe.Properties.Resources.resources
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\EntertainMe.csproj.GenerateResource.Cache
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\MediaToolkit.dll
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\EntertainMe.csprojResolveAssemblyReference.cache
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Media Vamp.exe.config
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Resources\Icon3.ico
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Media Vamp.exe
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Media Vamp.pdb
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\Media Vamp.exe
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\Media Vamp.pdb
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Media Vamp.exe.manifest
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\bin\Debug\Media Vamp.application
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\Media Vamp.TrustInfo.xml
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\Media Vamp.exe.manifest
+C:\Users\Devon\Documents\Visual Studio 2013\Projects\EntertainMe\EntertainMe\obj\Debug\Media Vamp.application
