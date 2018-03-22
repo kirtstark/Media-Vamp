@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="Media Vamp.exe" version="1.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
-  <description asmv2:iconFile="icon\Icon1.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <asmv1:assemblyIdentity name="Media Vamp.exe" version="1.0.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="MediaVampFinal.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
     <assemblyIdentity name="Media Vamp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Media Vamp.exe" size="55296">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Media Vamp.exe" size="38912">
       <assemblyIdentity name="Media Vamp" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>4mKUfszwCf4SaleNLjhM2F0mY63vkP74eXX+bJ0kVPA=</dsig:DigestValue>
+        <dsig:DigestValue>NnrizpXz2Xz6w/X3yuEfhijDHbbJAA/ivwFHOraPFks=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -117,6 +117,33 @@
       <dsig:DigestValue>DpqkWiD5ugOWtzZadYj0o6509PqP9g12CGG1B80Ryiw=</dsig:DigestValue>
     </hash>
   </file>
+  <file name="Icon2.ico" size="10134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>u9BTiwkCmKjpm/Jxp68HHJnHsGOhRAFHFK+zG4iA+ds=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Icon3.ico" size="10134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fSVi/Gr1w1FcUr3HyfiRsDDxG6KeeCxiuggLkuDwNlo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Iconka-Lucky-Leprechaun-Bowler-hat.ico" size="223643">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>I5j2s+h1if+X1vKIKE7itg1bPFxLdGz6lJRM1Un0dUs=</dsig:DigestValue>
+    </hash>
+  </file>
   <file name="Media Vamp.exe.config" size="189">
     <hash>
       <dsig:Transforms>
@@ -124,6 +151,24 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>rl5/qDc7Jz+tB+BIbOv9iMGPlRe6YJwrjmU09dnlPcs=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MediaVamp.ico" size="10134">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>fSVi/Gr1w1FcUr3HyfiRsDDxG6KeeCxiuggLkuDwNlo=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="MediaVampFinal.ico" size="5694">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vMFxm97HKk0dczIFmRVdQR0kODpeOVM7UbadKGiIteY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\Icon3.ico" size="10134">

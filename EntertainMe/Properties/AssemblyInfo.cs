@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Media Vamp")]
 [assembly: AssemblyDescription("Media selectiona and shuffle application")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("starkware")]
 [assembly: AssemblyProduct("Media Vamp")]
 [assembly: AssemblyCopyright("Copyright © Kirt Stark 2018")]
 [assembly: AssemblyTrademark("")]

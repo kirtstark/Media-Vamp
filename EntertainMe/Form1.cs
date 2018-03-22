@@ -10,33 +10,48 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WMPLib;
+using System.Diagnostics;
 
 namespace EntertainMe
 {
     public partial class Form1 : Form
     {
-        private string license = @"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        private static string license = @"Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the 'Software'), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.";
+
+        private static string giveMeMoney = @"www.bing.com";
         
+        private static bool bigScreenChecked = false;
+
         public Form1()
         {
             InitializeComponent();
             axWindowsMediaPlayer1.uiMode = "full";
             axWindowsMediaPlayer1.PlayStateChange += new AxWMPLib._WMPOCXEvents_PlayStateChangeEventHandler(player_PlayStateChange);
-
+            //axWindowsMediaPlayer1.
         }
 
         private void player_PlayStateChange(object sender, AxWMPLib._WMPOCXEvents_PlayStateChangeEvent e)
         {
-            if (e.newState == 3 && checkBoxFullScreen.Checked)
+            if (e.newState == 3)
+                buttonFullScreen.Visible = true;
+            if (!bigScreenChecked && e.newState == 3)
             {
-                axWindowsMediaPlayer1.fullScreen = true;
+                bigScreenChecked = true;
+                if (checkBoxFullScreen.Checked)
+                {
+                    axWindowsMediaPlayer1.fullScreen = true;
+                }
+                else
+                    axWindowsMediaPlayer1.fullScreen = false;
             }
-            else
-                axWindowsMediaPlayer1.fullScreen = false;
+            if (e.newState == 1)
+            {
+                buttonFullScreen.Visible = false;
+            }
         }
 
         private void buttonBrowse_Click(object sender, EventArgs e)
@@ -57,13 +72,17 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             }
         }
 
+        
         private void buttonPlay_Click(object sender, EventArgs e)
         {
+            bigScreenChecked = false;
             List<string> mediaFiles = new List<string>();
             string fileTye = string.Empty;
             IWMPPlaylistCollection pListColl;
             IWMPPlaylist pList;
             WMPLib.IWMPMedia media;
+
+            buttonFullScreen.Visible = true;
 
             try
             {
@@ -112,7 +131,18 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                 {
                     mediaFiles = cChooseFile.getFilesFromDirectory(labelFileName.Text, fileTye, false, (int)numericUpDown1.Value);
                 }
-
+                
+                if (mediaFiles == null)
+                {
+                    MessageBox.Show("whoops");
+                    return;
+                }
+                else if (mediaFiles.Count  < 1)
+                {
+                    MessageBox.Show("There were no media files found to play", "Notice");
+                    return;
+                }
+                
                 pListColl = axWindowsMediaPlayer1.playlistCollection;
                 pList = pListColl.newPlaylist("myPlaylist__158463578147afgrhertefdb");
 
@@ -128,7 +158,7 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
                     axWindowsMediaPlayer1.Ctlcontrols.play();
                 }
                 else
-                    Console.WriteLine("no files");
+                    MessageBox.Show("We did not find any media files within the directory", "Notice");
             }
             catch (Exception ex)
             {
@@ -149,6 +179,27 @@ THE SOFTWARE IS PROVIDED 'AS IS', WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonFullScreen_Click(object sender, EventArgs e)
+        {
+            if (axWindowsMediaPlayer1.playState == WMPPlayState.wmppsPlaying)
+            {
+                axWindowsMediaPlayer1.fullScreen = true;
+            }
+        }
+
+        private void buttonDonate_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(giveMeMoney);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error!");
+                return;
+            }
         }
     }
     

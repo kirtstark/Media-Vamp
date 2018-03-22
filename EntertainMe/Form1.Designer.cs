@@ -30,6 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
+            this.buttonDonate = new System.Windows.Forms.Button();
+            this.buttonFullScreen = new System.Windows.Forms.Button();
             this.buttonLicensing = new System.Windows.Forms.Button();
             this.timingGroupBox = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -53,18 +56,17 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.timingGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxTimeSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinTimeSec)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxTimeMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinTimeMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -82,6 +84,8 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.Controls.Add(this.buttonDonate);
+            this.splitContainer1.Panel2.Controls.Add(this.buttonFullScreen);
             this.splitContainer1.Panel2.Controls.Add(this.buttonLicensing);
             this.splitContainer1.Panel2.Controls.Add(this.timingGroupBox);
             this.splitContainer1.Panel2.Controls.Add(this.checkBoxAudioFiles);
@@ -93,13 +97,48 @@
             this.splitContainer1.Panel2.Controls.Add(this.label2);
             this.splitContainer1.Panel2.Controls.Add(this.numericUpDown1);
             this.splitContainer1.Panel2.Controls.Add(this.label1);
-            this.splitContainer1.Size = new System.Drawing.Size(488, 615);
-            this.splitContainer1.SplitterDistance = 377;
+            this.splitContainer1.Size = new System.Drawing.Size(488, 690);
+            this.splitContainer1.SplitterDistance = 422;
             this.splitContainer1.TabIndex = 1;
+            // 
+            // axWindowsMediaPlayer1
+            // 
+            this.axWindowsMediaPlayer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.axWindowsMediaPlayer1.Enabled = true;
+            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(0, 0);
+            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
+            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
+            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(488, 422);
+            this.axWindowsMediaPlayer1.TabIndex = 0;
+            // 
+            // buttonDonate
+            // 
+            this.buttonDonate.Location = new System.Drawing.Point(365, 192);
+            this.buttonDonate.Name = "buttonDonate";
+            this.buttonDonate.Size = new System.Drawing.Size(75, 23);
+            this.buttonDonate.TabIndex = 15;
+            this.buttonDonate.Text = "Donate";
+            this.buttonDonate.UseVisualStyleBackColor = true;
+            this.buttonDonate.Click += new System.EventHandler(this.buttonDonate_Click);
+            // 
+            // buttonFullScreen
+            // 
+            this.buttonFullScreen.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.buttonFullScreen.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.buttonFullScreen.Font = new System.Drawing.Font("Viner Hand ITC", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonFullScreen.ForeColor = System.Drawing.Color.Maroon;
+            this.buttonFullScreen.Location = new System.Drawing.Point(0, 231);
+            this.buttonFullScreen.Name = "buttonFullScreen";
+            this.buttonFullScreen.Size = new System.Drawing.Size(488, 33);
+            this.buttonFullScreen.TabIndex = 14;
+            this.buttonFullScreen.Text = "Full Screen";
+            this.buttonFullScreen.UseVisualStyleBackColor = true;
+            this.buttonFullScreen.Visible = false;
+            this.buttonFullScreen.Click += new System.EventHandler(this.buttonFullScreen_Click);
             // 
             // buttonLicensing
             // 
-            this.buttonLicensing.Location = new System.Drawing.Point(363, 179);
+            this.buttonLicensing.Location = new System.Drawing.Point(365, 166);
             this.buttonLicensing.Name = "buttonLicensing";
             this.buttonLicensing.Size = new System.Drawing.Size(75, 23);
             this.buttonLicensing.TabIndex = 13;
@@ -166,6 +205,11 @@
             // numericUpDownMaxTimeSec
             // 
             this.numericUpDownMaxTimeSec.Location = new System.Drawing.Point(134, 108);
+            this.numericUpDownMaxTimeSec.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
             this.numericUpDownMaxTimeSec.Name = "numericUpDownMaxTimeSec";
             this.numericUpDownMaxTimeSec.Size = new System.Drawing.Size(56, 20);
             this.numericUpDownMaxTimeSec.TabIndex = 7;
@@ -173,6 +217,11 @@
             // numericUpDownMinTimeSec
             // 
             this.numericUpDownMinTimeSec.Location = new System.Drawing.Point(134, 59);
+            this.numericUpDownMinTimeSec.Maximum = new decimal(new int[] {
+            59,
+            0,
+            0,
+            0});
             this.numericUpDownMinTimeSec.Name = "numericUpDownMinTimeSec";
             this.numericUpDownMinTimeSec.Size = new System.Drawing.Size(56, 20);
             this.numericUpDownMinTimeSec.TabIndex = 6;
@@ -198,6 +247,11 @@
             // numericUpDownMaxTimeMin
             // 
             this.numericUpDownMaxTimeMin.Location = new System.Drawing.Point(18, 108);
+            this.numericUpDownMaxTimeMin.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.numericUpDownMaxTimeMin.Name = "numericUpDownMaxTimeMin";
             this.numericUpDownMaxTimeMin.Size = new System.Drawing.Size(56, 20);
             this.numericUpDownMaxTimeMin.TabIndex = 2;
@@ -205,6 +259,11 @@
             // numericUpDownMinTimeMin
             // 
             this.numericUpDownMinTimeMin.Location = new System.Drawing.Point(18, 59);
+            this.numericUpDownMinTimeMin.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
             this.numericUpDownMinTimeMin.Name = "numericUpDownMinTimeMin";
             this.numericUpDownMinTimeMin.Size = new System.Drawing.Size(56, 20);
             this.numericUpDownMinTimeMin.TabIndex = 1;
@@ -327,20 +386,11 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "File Name";
             // 
-            // axWindowsMediaPlayer1
-            // 
-            this.axWindowsMediaPlayer1.Enabled = true;
-            this.axWindowsMediaPlayer1.Location = new System.Drawing.Point(3, 3);
-            this.axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
-            this.axWindowsMediaPlayer1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axWindowsMediaPlayer1.OcxState")));
-            this.axWindowsMediaPlayer1.Size = new System.Drawing.Size(482, 318);
-            this.axWindowsMediaPlayer1.TabIndex = 0;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(488, 615);
+            this.ClientSize = new System.Drawing.Size(488, 690);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -351,6 +401,7 @@
             this.splitContainer1.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.timingGroupBox.ResumeLayout(false);
             this.timingGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxTimeSec)).EndInit();
@@ -358,7 +409,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMaxTimeMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMinTimeMin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.axWindowsMediaPlayer1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -390,6 +440,8 @@
         private System.Windows.Forms.NumericUpDown numericUpDownMaxTimeSec;
         private System.Windows.Forms.NumericUpDown numericUpDownMinTimeSec;
         private System.Windows.Forms.Button buttonLicensing;
+        private System.Windows.Forms.Button buttonFullScreen;
+        private System.Windows.Forms.Button buttonDonate;
     }
 }
 
